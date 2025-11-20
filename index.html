@@ -1,69 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <!--Codificacion de caracteres-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
 
-    <!--Viewport Responsive-->
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=no"/>
+    <!--Viewport Responsive - Corregido y unificado-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Stranger Things</title>
 
     <!--Icono de la pestaña-->
-    <link rel="shortcut icon" type="image/png" href="/app_pwa/assets/favicon-1024-CWN3T3Xp.png"/>
+    <link rel="shortcut icon" type="image/png" href="/app_pwa/assets/favicon-1024-CWN3T3Xp.png" />
 
-    <!--Color de la App-->
-    <meta name="theme-color" content="#df5dd2"/>
+    <!--Color de la App - Actualizado para coincidir con tu manifest-->
+    <meta name="theme-color" content="#FB314E" />
 
-    <!--Optimización para Moviil-->
-    <meta name="MobileOptimized" content="width"/>
-    <meta name="HandheldFriendly" content="true"/>
+    <!--Color de la barra de estado en Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FB314E" />
+
+    <!--Optimización para Móvil-->
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
 
     <!--Meta etiquetas para Apple-->
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-    <meta rel="apple-touch-icon" href="/src/img/favicon.png"/>
-    <link rel="apple-touch-startup-image" href="/src/img/favicon.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Stranger Things" />
+    <link rel="apple-touch-icon" href="/app_pwa/assets/favicon-192-Bk63YYen.png" />
+    <link rel="apple-touch-startup-image" href="/app_pwa/assets/favicon-512-DG8o3FGG.png" />
 
-    <!--configuración inicial de la PWA-->
-    <link rel="manifest" href="/app_pwa/assets/manifest-CMxAFfIs.json">
+    <!--Configuración PWA - Vite PWA inyectará automáticamente el manifest-->
+    <!-- <link rel="manifest" href="/src/manifest.json"> -->
 
     <!--Hoja de estilos-->
 
     <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <title>Stranger Things</title>
-  <script type="module" crossorigin src="/app_pwa/assets/index-CPZ9VcQa.js"></script>
+  <script type="module" crossorigin src="/app_pwa/assets/index-CvblBUs6.js"></script>
   <link rel="stylesheet" crossorigin href="/app_pwa/assets/index-B30Zppio.css">
-</head>
+<link rel="manifest" href="/app_pwa/manifest.webmanifest"></head>
+
 <body>
-<header id="main-header">
-    <div class="container">
-        <div id="logo">
-            <h1>Cynthia Tepetate Torres</h1>
-        </div>
-        <div id="menu">
-            <ul>
-                <li>
-                    <a href="#main-header">Inicio</a>
-                </li>
-                <li>
-                    <a href="#services">Personajes</a>
-                </li>
-                <li>
-                    <a href="#videos">Tráilers</a>
-                </li>
-                <li>
-                    <a href="#footer">Más de la serie</a>
-                </li>
-                <li>
-                    <a href="#footer">Iniciar sesión</a>
-                </li>
-            </ul>
-        </div><!--end menu-->
-    </div><!--end container-->
-</header>
+    <header id="main-header">
+        <div class="container">
+            <div id="logo">
+                <h1>Cynthia Tepetate Torres</h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li>
+                        <a href="#main-header">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#services">Personajes</a>
+                    </li>
+                    <li>
+                        <a href="#videos">Tráilers</a>
+                    </li>
+                    <li>
+                        <a href="#footer">Más de la serie</a>
+                    </li>
+                    <li>
+                        <a href="#footer">Iniciar sesión</a>
+                    </li>
+                    <li id="install-pwa" style="display: none;">
+                        <a href="#" id="install-button"
+                            style="background-color: #FB314E; color: white; padding: 5px 10px; border-radius: 5px;">Descargar
+                            PWA</a>
+                    </li>
+                </ul>
+            </div><!--end menu-->
+        </div><!--end container-->
+    </header>
     <div class="clearfix"></div>
     <div id="slider">
         <div class="container">
@@ -76,22 +84,25 @@
             <div class="service">
                 <h3>La trama</h3>
                 <p>
-                    Ambientada en la década de 1980 en Hawkins, Indiana, la serie se centra en la desaparición de un niño, lo que destapa secretos y fuerzas sobrenaturales que acechan el pequeño pueblo.
+                    Ambientada en la década de 1980 en Hawkins, Indiana, la serie se centra en la desaparición de un
+                    niño, lo que destapa secretos y fuerzas sobrenaturales que acechan el pequeño pueblo.
                 </p>
                 <img src="/app_pwa/assets/1trama-BppeVRKE.jpg" />
             </div>
             <div class="service">
                 <h3>El Demogorgon</h3>
                 <p>
-                    Una de las criaturas más aterradoras del Mundo del Revés, el Demogorgon es una bestia depredadora que viaja entre dimensiones para cazar a sus víctimas.
-                </p> 
+                    Una de las criaturas más aterradoras del Mundo del Revés, el Demogorgon es una bestia depredadora
+                    que viaja entre dimensiones para cazar a sus víctimas.
+                </p>
                 <img src="/app_pwa/assets/2demogorgon-CUpbCbkk.jpg" />
             </div>
             <div class="service">
                 <h3>Eleven</h3>
                 <p>
-                    Una joven con habilidades telequinéticas, Eleven es una figura clave en la lucha contra las amenazas de Hawkins y una de las heroínas más poderosas de la serie.
-                </p> 
+                    Una joven con habilidades telequinéticas, Eleven es una figura clave en la lucha contra las amenazas
+                    de Hawkins y una de las heroínas más poderosas de la serie.
+                </p>
                 <img src="/app_pwa/assets/3eleven-DukmwepY.jpg" />
             </div>
         </div>
@@ -101,15 +112,21 @@
         <div class="container">
             <h2 class="subheader">Tráilers de las Temporadas</h2>
             <div class="video">
-                <iframe src="https://www.youtube.com/embed/b9EkMc79ZSU" title="Stranger Things Temporada 1 Tráiler" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/b9EkMc79ZSU" title="Stranger Things Temporada 1 Tráiler"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 <p>Temporada 1</p>
             </div>
             <div class="video">
-                <iframe src="https://www.youtube.com/embed/R1ZXOOLMJ8s" title="Stranger Things Temporada 2 Tráiler" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/R1ZXOOLMJ8s" title="Stranger Things Temporada 2 Tráiler"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 <p>Temporada 2</p>
             </div>
             <div class="video">
-                <iframe src="https://www.youtube.com/embed/YEG3bmU_WaI" title="Stranger Things Temporada 3 Tráiler" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/YEG3bmU_WaI" title="Stranger Things Temporada 3 Tráiler"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 <p>Temporada 3</p>
             </div>
         </div>
@@ -122,17 +139,17 @@
             <ul id="networks">
                 <li>
                     <a href="#">
-                        <img src="/app_pwa/assets/icono_x-emeBS5Gr.png" alt="Twitter"/>
+                        <img src="/app_pwa/assets/icono_x-emeBS5Gr.png" alt="Twitter" />
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="/app_pwa/assets/icono_f-C1wa3mKq.png" alt="Facebook"/>
+                        <img src="/app_pwa/assets/icono_f-C1wa3mKq.png" alt="Facebook" />
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="/app_pwa/assets/iconoinsta-CWIpMZoe.png" alt="Instagram"/>
+                        <img src="/app_pwa/assets/iconoinsta-CWIpMZoe.png" alt="Instagram" />
                     </a>
                 </li>
             </ul>
@@ -140,4 +157,5 @@
         </div>
     </footer>
 </body>
+
 </html>
